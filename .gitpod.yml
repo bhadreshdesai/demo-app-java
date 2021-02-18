@@ -1,9 +1,13 @@
 tasks:
   - init: ./gradlew build
     command: ./gradlew check
+ports:
+  - port: 8080
+    onOpen: ignore
 vscode:
   extensions:
     - redhat.java
     - vscjava.vscode-java-dependency
     - vscjava.vscode-java-debug
     - pkief.material-icon-theme
+    - gabrielbb.vscode-lombok@1.0.1:IAvPOHnFmUYZpRqErUNAiQ==
