@@ -1,6 +1,8 @@
 package bdd.demo.appjava.api.pub.auth;
 
+import static org.hamcrest.Matchers.containsString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -31,12 +33,22 @@ public class AuthTest {
 
     @Test
     public void testRegisterSuccess() throws Exception {
-        AuthRequest authRequest = AuthRequest.builder().build();
+        RegisterRequest authRequest = RegisterRequest.builder().username("user@name.com").fullName("Full Name").password("password").rePassword("password").build();
         MvcResult registerResult = this.mockMvc.perform(post("/api/pub/auth/register")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(authRequest)))
                 .andExpect(status().isOk()).andReturn();
         String response = registerResult.getResponse().getContentAsString();
-        LOG.info("registerResult response: " + response);
+        LOG.info("testRegisterSuccess response: " + response);
+    }
+
+    @Test
+    public void testRegisterInvalidRequest() throws Exception {
+        RegisterRequest authRequest = RegisterRequest.builder().username("invalid_email").fullName("Full Name").password("password").rePassword("password").build();
+        MvcResult registerResult = this.mockMvc.perform(post("/api/pub/auth/register")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(authRequest)))
+                .andExpect(status().isBadRequest()).andReturn();
+        LOG.info("testRegisterInvalidRequest message: " + registerResult.getResolvedException().getMessage());
     }
 }
