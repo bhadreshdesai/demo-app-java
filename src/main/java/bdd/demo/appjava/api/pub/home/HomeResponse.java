@@ -1,10 +1,9 @@
 package bdd.demo.appjava.api.pub.home;
 
-import lombok.Builder;
-import lombok.Data;
-
-@Builder
-@Data
+@lombok.AllArgsConstructor
+@lombok.Builder
+@lombok.Data
+@lombok.NoArgsConstructor
 public class HomeResponse {
     private String name;
     private String shortname;

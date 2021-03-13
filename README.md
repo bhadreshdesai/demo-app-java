@@ -1,6 +1,8 @@
 # demo-app-java
 Demo Java Application
 
+https://github.com/Yoh0xFF/java-spring-security-example
+
 ## Step 1
 Create project using https://start.spring.io
 

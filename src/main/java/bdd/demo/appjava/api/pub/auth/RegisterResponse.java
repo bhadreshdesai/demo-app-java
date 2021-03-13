@@ -3,11 +3,10 @@ package bdd.demo.appjava.api.pub.auth;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
-import lombok.Builder;
-import lombok.Data;
-
-@Builder
-@Data
+@lombok.AllArgsConstructor
+@lombok.Builder
+@lombok.Data
+@lombok.NoArgsConstructor
 public class RegisterResponse {
     @NotBlank @Email
     private String username;

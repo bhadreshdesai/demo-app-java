@@ -9,6 +9,9 @@ vscode:
     - redhat.java
     - vscjava.vscode-java-debug@0.28.0
     - vscjava.vscode-java-dependency
+    - vscjava.vscode-java-test
     - pkief.material-icon-theme
     - gabrielbb.vscode-lombok@1.0.1:IAvPOHnFmUYZpRqErUNAiQ==
+
+    
 #- vscjava.vscode-java-debug@0.32.0:R8oU9HBRA5NXqlZbwvQaUw==

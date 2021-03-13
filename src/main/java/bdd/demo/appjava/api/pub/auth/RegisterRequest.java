@@ -7,11 +7,11 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.Builder;
-import lombok.Data;
 
-@Builder
-@Data
+@lombok.AllArgsConstructor
+@lombok.Builder
+@lombok.Data
+@lombok.NoArgsConstructor
 public class RegisterRequest {
     @Schema(description = "A valid email address used as username.", example = "abc@test.com")
     @NotBlank @Email
