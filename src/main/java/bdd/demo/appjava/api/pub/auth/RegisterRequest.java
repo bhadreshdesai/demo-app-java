@@ -23,7 +23,7 @@ public class RegisterRequest {
     private String fullName;
 
     @Schema(description = "Users password")
-    @NotBlank
+    @NotBlank(message = "{password.notblank}")
     private String password;
 
     @Schema(description = "Re-type users password. Must match the password.")
