@@ -4,14 +4,16 @@ tasks:
 ports:
   - port: 8080
     onOpen: ignore
-vscode:
-  extensions:
-    - redhat.java
-    - vscjava.vscode-java-debug@0.28.0
-    - vscjava.vscode-java-dependency
-    - vscjava.vscode-java-test
-    - pkief.material-icon-theme
-    - gabrielbb.vscode-lombok@1.0.1:IAvPOHnFmUYZpRqErUNAiQ==
+#vscode:
+#  extensions:
+#    - redhat.java
+#    - vscjava.vscode-java-debug@0.28.0
+#    - vscjava.vscode-java-dependency
+#    - vscjava.vscode-java-test
+#    - pkief.material-icon-theme
+#    - gabrielbb.vscode-lombok@1.0.1:IAvPOHnFmUYZpRqErUNAiQ==
+#    - ngryman.codesandbox-theme
 
-    
+   
 #- vscjava.vscode-java-debug@0.32.0:R8oU9HBRA5NXqlZbwvQaUw==
+# gabrielbb.vscode-lombok@1.0.1:IAvPOHnFmUYZpRqErUNAiQ==
